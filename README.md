@@ -1,5 +1,7 @@
 # Privacy-Preserving Analytics
 
+[![tests](https://github.com/nishankswamy/differential-privacy/actions/workflows/tests.yml/badge.svg)](https://github.com/nishankswamy/differential-privacy/actions/workflows/tests.yml)
+
 Show that anonymisation fails by re-identifying a synthetic "de-identified"
 dataset, then implement differential privacy properly — mechanisms, sensitivity,
 a privacy budget, local DP — and measure what real privacy costs.
