@@ -190,7 +190,15 @@ tests/               26 tests
 
 ## What I'd do differently
 
-<!-- Fill this in. -->
+The randomised-response calibration bug — truth-or-uniform gives a `2e^ε+1`
+likelihood ratio, not `e^ε` — slipped through because I was testing *utility*
+(does the estimate converge) and utility looked perfect. A miscalibrated DP
+mechanism is invisible on utility and only shows up when you measure the privacy
+guarantee directly. So I'd test the likelihood ratio as a first-class property
+from the very first commit, before any utility test. More broadly I'd reach for a
+proper privacy accountant (Rényi DP / zCDP) instead of basic-plus-advanced
+composition, since the composition bound is where a real deployment's budget
+lives or dies.
 
 ## Known gaps
 
